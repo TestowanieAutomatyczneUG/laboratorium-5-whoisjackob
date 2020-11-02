@@ -2,7 +2,7 @@ class hamming:
 
     def distance(self, input1, input2):
 
-        if input1 == "" or input2 == "":
+        if input1 == "" and input2 == "":
 
             return 0
 
@@ -38,5 +38,15 @@ class hamming:
         elif input1 < input2:
 
             raise ValueError("Pierwsze slowo jest krotsze od drugiego")
+
+        elif input1 == "" and input2 != "":
+
+            raise ValueError("Pierwszy input jest pusty")
+
+        elif input2 == "" and input1 != "":
+
+            raise ValueError("Drugi input jest pusty")
+
+
 
 
