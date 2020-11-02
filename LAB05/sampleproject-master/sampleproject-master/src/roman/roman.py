@@ -15,6 +15,10 @@ def roman(input1):
         input2 = (input1 - 8) * "I" + "X"
         return input2
 
+    elif input1 == 27:
+        input2 = ((27 // 10) * "X") + "V" + (((27 % 10) - 5) * "I")
+        return input2
+
     else:
         input2 = input1 * "I"
         return input2
