@@ -23,12 +23,20 @@ class hamming:
 
             check(count, input1, input2, k)
 
-        elif input1 == input2:
+        elif len(input1) == 1 and len(input2) == 1 and input1 == input2:
 
             return 0
 
-        elif input1 != input2:
+        elif len(input1) == 1 and len(input2) == 1 and input1 != input2:
 
             return 1
+
+        elif input1 > input2:
+
+            raise ValueError("Pierwsze slowo jest dluzsze od drugiego")
+
+        elif input1 < input2:
+
+            raise ValueError("Pierwsze slowo jest krotsze od drugiego")
 
 
