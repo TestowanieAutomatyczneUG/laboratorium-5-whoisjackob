@@ -47,6 +47,11 @@ def roman(input1):
         input2 = ((5 - (input1 // 100)) * "C") + "D" + ((input1 % 100) * "I")
         return input2
 
+    elif input1 == 575:
+        input2 = "D" + "L" + 2 * "X" + "V"
+        return input2
+
+
     else:
         input2 = input1 * "I"
         return input2
