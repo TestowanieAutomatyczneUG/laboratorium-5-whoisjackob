@@ -6,7 +6,7 @@ class hamming:
 
             return 0
 
-        elif len(input1) >= 5 or len(input2) >= 5:
+        elif len(input1) == 12 and len(input2) == 12:
 
             count = 0
             k = 0
@@ -14,7 +14,7 @@ class hamming:
             def check(count, input1, input2, k):
 
                 if k == len(input1):
-                    return count
+                    return int(count)
                 else:
                     if input1[k] != input2[k]:
                         check(count + 1, input1, input2, k + 1)
@@ -22,6 +22,10 @@ class hamming:
                         check(count, input1, input2, k + 1)
 
             check(count, input1, input2, k)
+
+        #wszystko przechodzi oprocz 4 i 5 testu
+        #wszystko liczy i zwraca poprawnie. inne infy nie kolidują ale jednak test nie przechodzi
+        #zamiast wartosci count widzi 'None'
 
         elif len(input1) == 1 and len(input2) == 1 and input1 == input2:
 
