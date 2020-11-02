@@ -9,6 +9,10 @@ def roman(input1):
         input2 = "V"
         return input2
 
+    elif input1 >= 6 and input1 < 9:
+        input2 = "V" + (input1-5)*"I"
+        return input2
+
     else:
         input2 = input1*"I"
         return input2
