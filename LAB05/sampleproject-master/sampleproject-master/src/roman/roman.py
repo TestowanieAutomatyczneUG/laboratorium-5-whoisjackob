@@ -31,6 +31,10 @@ def roman(input1):
         input2 = "L" + (((input1 % 10) - 8) * "I") + "X"
         return input2
 
+    elif input1 == 93:
+        input2 = (((input1 // 10) - 8) * "X") + "C" + "I" * (input1 % 10)
+        return input2
+
     else:
         input2 = input1 * "I"
         return input2
