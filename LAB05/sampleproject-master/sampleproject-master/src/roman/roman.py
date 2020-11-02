@@ -20,7 +20,11 @@ def roman(input1):
         return input2
 
     elif input1 == 48:
-        input2 = ((5-(input1 // 10)) * "X") + "L" + "V" + (((input1 % 10) - 5) * "I")
+        input2 = ((5 - (input1 // 10)) * "X") + "L" + "V" + (((input1 % 10) - 5) * "I")
+        return input2
+
+    elif input1 == 49:
+        input2 = ((5 - (input1 // 10)) * "X") + "L" + (((input1 % 10) - 8) * "I") + "X"
         return input2
 
     else:
