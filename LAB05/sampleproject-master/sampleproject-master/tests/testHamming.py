@@ -1,41 +1,43 @@
-import hamming
 import unittest
-
+import hamming as hamming
+from hamming.hamming import hamming
 
 class HammingTest(unittest.TestCase):
+
     def test_empty_strands(self):
-        self.assertEqual(hamming.distance("", ""), 0)
+        self.assertEqual(self.temp.distance("", ""), 0)
 
     def test_single_letter_identical_strands(self):
-        self.assertEqual(hamming.distance("A", "A"), 0)
+        self.assertEqual(self.temp.distance("A", "A"), 0)
 
     def test_single_letter_different_strands(self):
-        self.assertEqual(hamming.distance("G", "T"), 1)
+        self.assertEqual(self.temp.distance("G", "T"), 1)
 
     def test_long_identical_strands(self):
-        self.assertEqual(hamming.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
+        self.assertEqual(self.temp.distance("GGACTGAAATCTG", "GGACTGAAATCTG"), 0)
 
     def test_long_different_strands(self):
-        self.assertEqual(hamming.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
+        self.assertEqual(self.temp.distance("GGACGGATTCTG", "AGGACGGATTCT"), 9)
 
     def test_disallow_first_strand_longer(self):
         with self.assertRaisesWithMessage(ValueError):
-            hamming.distance("AATG", "AAA")
+            self.temp.distance("AATG", "AAA")
 
     def test_disallow_second_strand_longer(self):
         with self.assertRaisesWithMessage(ValueError):
-            hamming.distance("ATA", "AGTG")
+            self.temp.distance("ATA", "AGTG")
 
     def test_disallow_left_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
-            hamming.distance("", "G")
+            self.temp.distance("", "G")
 
     def test_disallow_right_empty_strand(self):
         with self.assertRaisesWithMessage(ValueError):
-            hamming.distance("G", "")
+            self.temp.distance("G", "")
 
     # Utility functions
     def setUp(self):
+        self.temp = hamming()
         try:
             self.assertRaisesRegex
         except AttributeError:
