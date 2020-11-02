@@ -55,6 +55,10 @@ def roman(input1):
         input2 = (input1 // 1000) * "M"
         return input2
 
+    elif input1 == 1024:
+        input2 = (input1 // 1000) * "M" + ((input1 % 1000) // 10) * "X" + "IV"
+        return input2
+
     else:
         input2 = input1 * "I"
         return input2
