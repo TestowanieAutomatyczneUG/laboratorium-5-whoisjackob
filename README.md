@@ -1,0 +1,1 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/TestowanieAutomatyczneUG/https://github.com/laboratorium-5-whoisjackob/testystepik)
